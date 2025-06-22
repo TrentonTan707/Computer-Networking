@@ -43,7 +43,7 @@ def decrypt_with_aes(encrypted_data, password, salt):
     decrypted_data = f.decrypt(encrypted_data) #call the Fernet decrypt method
     return decrypted_data.decode('utf-8')
 
-salt = 16 # Remember it should be a byte-object
+salt = os.urandom(16) # Remember it should be a byte-object
 password = "testPass"
 input_string = "testString"
 
