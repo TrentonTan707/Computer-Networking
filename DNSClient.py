@@ -6,7 +6,7 @@ real_name_server = "8.8.8.8" # Research public DNS servers to find a valid DNS s
 
 
 # Create a list of domain names to query - use the same list from the DNS Server
-domainList  = ['example.com','safebank.com','google.com','nyu.edu','legitsite.com']
+domainList  = ['example.com.','safebank.com.','google.com.','nyu.edu.','legitsite.com.']
 
 # Define a function to query the local DNS server for the IP address of a given domain name
 def query_local_dns_server(domain,question_type):
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     
     # Call the function to compare the results from both DNS servers and print the result
     result = compare_dns_servers(domainList,question_type)
-    result = query_local_dns_server('nyu.edu',question_type)
+    result = query_local_dns_server('nyu.edu.',question_type)
     print(result)
     
     #print(exfiltrate_info('nyu.edu',question_type))
