@@ -77,6 +77,25 @@ dns_records = {
     },
    
     # Add more records as needed (see assignment instructions!
+    'safebank.com':{
+        dns.rdatatype.A: '192.168.1.102'
+    },
+    'google.com':{
+        dns.rdatatype.A: '192.168.1.103'
+    },
+    'legitsite.com':{
+        dns.rdatatype.A: '192.168.1.104'
+    },
+    'yahoo.com':{
+        dns.rdatatype.A: '192.168.1.105'
+    },
+    'nyu.edu':{
+        dns.rdatatype.A: '192.168.1.106',
+        dns.rdatatype.TXT: (generate_sha256_hash(input_string),),
+        dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples        
+        dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0373:7312',
+        dns.rdatatype.NS: 'ns1.nyu.edi.',
+    },
 }
 
 def run_dns_server():
