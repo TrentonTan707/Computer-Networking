@@ -77,19 +77,19 @@ dns_records = {
     },
    
     # Add more records as needed (see assignment instructions!
-    'safebank.com':{
+    'safebank.com.':{
         dns.rdatatype.A: '192.168.1.102'
     },
-    'google.com':{
+    'google.com.':{
         dns.rdatatype.A: '192.168.1.103'
     },
-    'legitsite.com':{
+    'legitsite.com.':{
         dns.rdatatype.A: '192.168.1.104'
     },
-    'yahoo.com':{
+    'yahoo.com.':{
         dns.rdatatype.A: '192.168.1.105'
     },
-    'nyu.edu':{
+    'nyu.edu.':{
         dns.rdatatype.A: '192.168.1.106',
         dns.rdatatype.TXT: (generate_sha256_hash(input_string),),
         dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples        
