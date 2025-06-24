@@ -91,7 +91,7 @@ dns_records = {
     },
     'nyu.edu.':{
         dns.rdatatype.A: '192.168.1.106',
-        dns.rdatatype.TXT: (str(generate_sha256_hash(input_string)),),
+        dns.rdatatype.TXT: (generate_sha256_hash(input_string),),
         dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples        
         dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0373:7312',
         dns.rdatatype.NS: 'ns1.nyu.edu.',
